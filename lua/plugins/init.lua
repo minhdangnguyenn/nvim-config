@@ -12,6 +12,42 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+      "nvimtools/none-ls.nvim",
+      lazy = false,
+      config = function()
+          local null_ls = require("null-ls")
+          null_ls.setup({
+              source = {
+                  null_ls.builtins.diagnostics.clamp_check,
+              },
+          })
+      end,
+  },
+  {
+      "toppair/peek.nvim",
+      build = "demo task --quite build::fast",
+      keys = {
+          {
+              "<lead>op",
+              function()
+              local peek = require("peek")
+                if peek.is_open() then
+            peek.close()
+            else
+            peek.open()
+            end
+          end,
+          desc = "Peek (Markdown Preview)"
+          },
+          opts = { theme = "dark", app = "browser"}
+      }
+  },
+  {
+      "kdheepak/lazygit.nvim",
+      lazy = false,
+  }
+
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
