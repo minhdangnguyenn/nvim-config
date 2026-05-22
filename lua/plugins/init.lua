@@ -12,18 +12,18 @@ return {
       require "configs.lspconfig"
     end,
   },
-  {
-      "nvimtools/none-ls.nvim",
-      lazy = false,
-      config = function()
-          local null_ls = require("null-ls")
-          null_ls.setup({
-              source = {
-                  null_ls.builtins.diagnostics.clamp_check,
-              },
-          })
-      end,
-  },
+  --{
+  --    "nvimtools/none-ls.nvim",
+  --    lazy = false,
+  --    config = function()
+  --        local null_ls = require("null-ls")
+  --        null_ls.setup({
+  --            source = {
+  --                null_ls.builtins.diagnostics.clamp_check,
+  --           },
+  --        })
+  --    end,
+  --},
   {
       "toppair/peek.nvim",
       build = "demo task --quite build::fast",
