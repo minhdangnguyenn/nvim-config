@@ -14,13 +14,13 @@ for _, server in ipairs(servers) do
   }
 end
 
--- Cấu hình cách hiển thị diagnostics
+-- config diagnostics
 vim.diagnostic.config({
   virtual_text = {
-    prefix = "●",   -- ký hiệu đứng trước lỗi, có thể đổi thành "" hay ">>"
-    spacing = 2,    -- khoảng cách giữa code và lỗi
+    prefix = ">>",   -- symbol stays before error
+    spacing = 2,    -- add a space between code and error
   },
-  signs = true,      -- vẫn giữ chữ E, W ở cột trái
-  underline = true,  -- gạch chân chỗ có lỗi
+  signs = true,      -- keep the signs
+  underline = true,  -- unterline error
   update_in_insert = false,
 })

@@ -12,18 +12,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-  --{
-  --    "nvimtools/none-ls.nvim",
-  --    lazy = false,
-  --    config = function()
-  --        local null_ls = require("null-ls")
-  --        null_ls.setup({
-  --            source = {
-  --                null_ls.builtins.diagnostics.clamp_check,
-  --           },
-  --        })
-  --    end,
-  --},
   {
       "toppair/peek.nvim",
       build = "demo task --quite build::fast",
@@ -71,17 +59,3 @@ return {
   },
 
 
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
-}
