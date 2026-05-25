@@ -7,6 +7,7 @@ return {
 
   {
     "neovim/nvim-lspconfig",
+    version = "v0.1.x", 
     config = function()
       require "configs.lspconfig"
     end,
